@@ -22,6 +22,9 @@ class App extends Component {
                     <Header/>
                     <Hero/>
                     <HelloCreating/>
+                    <Counter render={counter => (
+                        <Message counter={counter}/>
+                    )}/>
                     <DynamicCreating color={"black"}>
                         <h2>ll</h2>
                         <h2>lll</h2>
@@ -35,6 +38,37 @@ class App extends Component {
     }
 }
 
+class Counter extends Component {
+    state = {
+        counter: 0
+    }
+
+    changeCounter = () => {
+        this.setState(({counter}) => ({
+            counter: counter + 1
+        }))
+    }
+
+    render() {
+        return (
+            <>
+                <button
+                    className="b-[pink] text-black"
+                    onClick={this.changeCounter}
+                >
+                    Click me
+                </button>
+                {this.props.render(this.state.counter)}
+            </>
+        )
+    }
+}
+
+const Message = (props) => {
+    return (
+        <h2 className="text-black">counter is {props.counter}</h2>
+    )
+}
 const HelloCreating = (props) => {
     return (
         <div style={{'width': '600px', 'margin': '0 auto'}}>
