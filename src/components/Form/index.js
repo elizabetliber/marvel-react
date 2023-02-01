@@ -8,7 +8,7 @@ class Form extends Component {
     render() {
         return (
             <div>
-                <form className="w-50 border mt-5 p-3 m-auto max-w-[360px]">
+                <form className="w-50 border mt-4 p-3 m-auto max-w-[360px]">
                     <div className="mb-3 flex flex-col">
                         <label htmlFor="exampleFormControlInput1" className="text-black">Email address</label>
                         <input type="email" className="border border-[pink] pl-2" id="exampleFormControlInput1" placeholder="name@example.com"/>
