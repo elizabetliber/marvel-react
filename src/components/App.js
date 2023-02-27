@@ -27,7 +27,6 @@ class App extends Component {
                     <img src={superhero} alt="" className="absolute -bottom-16 -right-44 w-[467px] h-[372px]"/>
                 </div>
             </div>
-
         );
     }
 }
