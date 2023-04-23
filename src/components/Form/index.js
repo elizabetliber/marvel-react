@@ -19,8 +19,8 @@ class Form extends Component {
         return (
             <div>
                 <form onClick={this.handleClick} className="w-50 border mt-4 p-3 m-auto max-w-[360px] relative">
-                    <div className="mb-3 flex flex-col">
-                        <label htmlFor="exampleFormControlInput1" className="text-black">Email address</label>
+                    <div className="mb-5 flex flex-col">
+                        <label htmlFor="exampleFormControlInput1" className="text-black">Your Email address</label>
                         <input type="email" className="border border-[pink] p-2 text-black"
                                id="exampleFormControlInput1" placeholder="name@example.com"/>
                     </div>
