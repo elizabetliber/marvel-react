@@ -1,78 +1,62 @@
-import React, {Component} from 'react';
+import React, {useEffect, useState} from 'react';
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 import MarvelService from "../../services/MarvelService";
 import ErrorMessage from "../../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
 
-class Hero extends Component {
-    state = {
-        char: {},
-        loading: true,
-        error: false
+const Hero = () => {
+    const [char, setChar] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+
+    const marvelService = new MarvelService()
+
+    useEffect(() => {
+        updateChar();
+        const timerId = setInterval(updateChar, 60000);
+
+        return () => {
+            clearInterval(timerId)
+        }
+    }, [])
+
+    const onCharLoaded = (char) => {
+        setLoading(false);
+        setChar(char);
     }
 
-    marvelService = new MarvelService()
-
-    componentDidMount() {
-        this.updateChar()
-        this.marvelService.getAllCharacters()
-            .then(this.onCharListLoaded)
-            .catch(this.onError)
-    }
-    componentDidUpdate() {
-        console.log('update')
+    const onCharLoading = () => {
+        setLoading(true);
     }
 
-    componentWillUnmount() {
-        console.log('unmount')
+    const onError = () => {
+        setError(true);
+        setLoading(false);
     }
 
-    onCharLoaded = (char) => {
-        this.setState({
-            char,
-            loading: false
-        })
-    }
-
-    onCharLoading = () => {
-        this.setState({
-            loading: true
-        })
-    }
-
-    onError = () => {
-        this.setState({
-            loading: false,
-            error: true,
-        })
-    }
-
-    updateChar = () => {
+    const updateChar = () => {
         const id = Math.floor(Math.random() * (1011334 - 1010789) + 1010789)
-        this.onCharLoading();
-        this.marvelService
+        onCharLoading();
+        marvelService
             .getCharacter(id)
-            .then(this.onCharLoaded)
-            .catch(this.onError)
+            .then(onCharLoaded)
+            .catch(onError);
     }
-
-    render() {
-        const {char, loading, error} = this.state;
-        const spinner = loading ? <Spinner/> : null;
-        const errorMessage = error ? <ErrorMessage/> : null;
-        const content = !(loading || error) ? <LeftSide char={char}/> : null;
-        return (
-            <div className="flex shadow-[5px_5px_20px_rgba(0,0,0,0.25)] mt-12">
-                <div className="w-[550px] flex items-center justify-center">
+    // const {char, loading, error} = this.state;
+    const spinner = loading ? <Spinner/> : null;
+    const errorMessage = error ? <ErrorMessage/> : null;
+    const content = !(loading || error) ? <LeftSide char={char}/> : null;
+    return (
+        <div className="flex shadow-[5px_5px_20px_rgba(0,0,0,0.25)] mt-12">
+            <div className="flex flex-[1_1_50%] items-center justify-center">
                 {errorMessage}
                 {spinner}
                 {content}
-                </div>
-                <RightSide updateChar={this.updateChar}/>
             </div>
-        );
-    }
+            <RightSide updateChar={updateChar}/>
+        </div>
+    );
 }
 
 export default Hero;

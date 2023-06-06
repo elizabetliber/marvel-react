@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4784acef-37a1-42a5-a524-eb722089b093" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Form/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Form/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/LeftSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/LeftSide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/RightSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/RightSide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Form/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/LeftSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/LeftSide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/RightSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/RightSide.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spinner/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/Spinner.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,20 +32,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/lisa/WebstormProjects/marvel-react&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/lisa/WebstormProjects/marvel-react",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,7 +62,17 @@
       <workItem from="1678780238530" duration="429000" />
       <workItem from="1678955136327" duration="1252000" />
       <workItem from="1679380857744" duration="5382000" />
-      <workItem from="1679398228462" duration="1199000" />
+      <workItem from="1679398228462" duration="9849000" />
+      <workItem from="1680607566257" duration="1209000" />
+      <workItem from="1681298130222" duration="644000" />
+      <workItem from="1682151551372" duration="862000" />
+      <workItem from="1682229742907" duration="6279000" />
+      <workItem from="1683714153835" duration="2411000" />
+      <workItem from="1684223851850" duration="624000" />
+      <workItem from="1684312363938" duration="1261000" />
+      <workItem from="1684773084868" duration="14000" />
+      <workItem from="1685295535417" duration="3681000" />
+      <workItem from="1686047121567" duration="9814000" />
     </task>
     <task id="LOCAL-00001" summary="added render-prop">
       <created>1675192031640</created>
@@ -83,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677520124230</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Portal">
+      <created>1679399776193</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679399776194</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +118,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added render-prop" />
     <MESSAGE value="added form" />
-    <option name="LAST_COMMIT_MESSAGE" value="added form" />
+    <MESSAGE value="Portal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Portal" />
   </component>
 </project>

@@ -1,60 +1,59 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 import LeftSide from "./LeftSide";
 import RightSide from "./RightSide";
 import MarvelService from "../../services/MarvelService";
 import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 
-class Content extends Component {
-    state = {
-        charList: [],
-        loading: true,
-        error: false,
-        newItemLoading: false,
-        offset: 210
+const Content = ({onCharSelected, charId}) => {
+    const [charList, setCharList] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+    const [newItemLoading, setNewItemLoading] = useState(false);
+    const [offset, setOffset] = useState(210);
+
+    const marvelService = new MarvelService();
+
+    useEffect(() => {
+        onRequest();
+    }, []);
+
+    const onRequest = (offset) => {
+        onCharListLoading();
+        marvelService.getAllCharacters(offset)
+            .then(onCharListLoaded)
+            .catch(onError);
     }
 
-    marvelService = new MarvelService()
-
-    componentDidMount() {
-        this.onRequest()
+    const onCharListLoading = () => {
+        setNewItemLoading(true);
     }
 
-    onRequest = (offset) => {
-        this.onCharListLoading()
-        this.marvelService.getAllCharacters(offset)
-            .then(this.onCharListLoaded)
-            .catch(this.onError)
+    const  onCharListLoaded = (newCharList) => {
+        setCharList(charList => [...charList, ...newCharList]);
+        setLoading(loading => false);
+        setNewItemLoading(newItemLoading => true);
+        setOffset(offset => offset + 9);
     }
 
-    onCharListLoading = () => {
-        this.setState({
-            newItemLoading: true,
-        })
+    const onError = () => {
+        setError(true);
+        setLoading(false)
     }
 
-    onCharListLoaded = (newCharList) => {
-        this.setState(({offset, charList}) => ({
-            charList: [...charList, ...newCharList],
-            loading: false,
-            newItemLoading: false,
-            offset: offset + 9
-        }))
-    }
-
-    onError = () => {
-        this.setState({
-            error: true,
-            loading: false
-        })
-    }
-
-    render() {
-        const {onCharSelected, charId} = this.props
+    {
         return (
             <div className="flex mt-12">
-                <LeftSide onCharSelected={onCharSelected} onRequest={this.onRequest} state={this.state}/>
+                <LeftSide
+                    onCharSelected={onCharSelected}
+                    onRequest={onRequest}
+                    charList={charList}
+                    loading={loading}
+                    error={error}
+                    newItemLoading={newItemLoading}
+                    offset={offset}
+                />
                 <ErrorBoundary>
-                    <RightSide charId={charId} state={this.state}/>
+                    <RightSide charId={charId}/>
                 </ErrorBoundary>
             </div>
         );
