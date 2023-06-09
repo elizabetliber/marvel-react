@@ -5,24 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4784acef-37a1-42a5-a524-eb722089b093" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hooks/http.hook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/LeftSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/LeftSide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/RightSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/RightSide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Form/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/LeftSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/LeftSide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/RightSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/RightSide.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/spinner/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/Spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/MarvelService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/MarvelService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/lisa/WebstormProjects/marvel-react",
+    "last_opened_file_path": "/home/lisa/Рабочий стол/SPA",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,7 +73,8 @@
       <workItem from="1684312363938" duration="1261000" />
       <workItem from="1684773084868" duration="14000" />
       <workItem from="1685295535417" duration="3681000" />
-      <workItem from="1686047121567" duration="9814000" />
+      <workItem from="1686047121567" duration="14881000" />
+      <workItem from="1686321376940" duration="5226000" />
     </task>
     <task id="LOCAL-00001" summary="added render-prop">
       <created>1675192031640</created>
@@ -109,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679399776194</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed classes to hooks">
+      <created>1686080905253</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686080905253</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +128,7 @@
     <MESSAGE value="added render-prop" />
     <MESSAGE value="added form" />
     <MESSAGE value="Portal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Portal" />
+    <MESSAGE value="changed classes to hooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed classes to hooks" />
   </component>
 </project>
