@@ -1,22 +1,11 @@
 import {useHttp} from "../hooks/http.hook";
 
 const useMarvelService = () => {
-    const {loading, request, error} = useHttp()
+    const {loading, request, error} = useHttp();
+
     const _apiBase = "https://gateway.marvel.com:443/v1/public/";
     const _apiKey = process.env.REACT_APP_API_KEY
     const _baseOffset = 210
-
-
-
-    const getResource = async (url) => {
-        let res = await fetch(url);
-
-        if (!res.ok) {
-            throw new Error(`Could not fetch ${url}, status: ${res.status}`)
-        }
-
-        return await res.json();
-    }
 
     const getAllCharacters = async(offset = _baseOffset) => {
         const res = await request(`${_apiBase}characters?limit=9&offset=${offset}&${_apiKey}`)

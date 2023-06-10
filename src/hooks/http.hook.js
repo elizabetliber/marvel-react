@@ -5,7 +5,8 @@ export const useHttp = () => {
     const [error, setError] = useState(null);
 
     const request = useCallback(async (url, method = "GET", body = null, headers = {'Content-Type': 'application/json'}) => {
-        setLoading(true)
+
+        setLoading(true);
 
         try {
             const response = await fetch(url, {method, body, headers})
@@ -24,8 +25,9 @@ export const useHttp = () => {
             throw e;
         }
 
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        const clearError = useCallback(() => setError(null), []);
-        return {loading, error, request, clearError}
     }, [])
+
+    const clearError = useCallback(() => setError(null), []);
+
+    return {loading, error, request, clearError}
 }
